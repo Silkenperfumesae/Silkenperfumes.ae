@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SilkenPerfumes.ae</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #f9f4f0, #fff);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #8e5547, #a4745d);
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8em;
+      margin: 0;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    }
+
+    header p {
+      font-style: italic;
+      font-size: 1.4em;
+      color: #f5eae6;
+      margin-top: 10px;
+    }
+
+    nav {
+      background: #3a2f2f;
+      padding: 14px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd5ba;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      font-size: 2.8em;
+      margin-bottom: 40px;
+      color: #8e5547;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+      max-width: 400px;
+      margin: auto;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .product h3 {
+      color: #8e5547;
+      margin: 10px 0 5px;
+      font-size: 1.7em;
+    }
+
+    .product p {
+      margin: 8px 0;
+      font-size: 1.05em;
+    }
+
+    .product img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      margin-top: 20px;
+      display: none;
+    }
+
+    .button {
+      margin-top: 15px;
+      padding: 12px 22px;
+      background: #8e5547;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .button:hover {
+      background: #a4745d;
+      box-shadow: 0 0 10px #a4745d, 0 0 20px #e7cfc5;
+    }
+
+    #buyNow {
+      display: none;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #3a2f2f;
+      color: #f1f1f1;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.95em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SilkenPerfumes.ae</h1>
+  <p>Elegance in Every Drop</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#product">Product</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p style="text-align: center;">
+    At <strong>Silken Perfumes</strong>, we blend heritage and luxury into exquisite fragrances. Our signature scent, <em>Stronger With You</em>, is crafted for those who dare to be unforgettable.
+  </p>
+</section>
+
+<section id="product">
+  <h2>Featured Perfume</h2>
+  <div class="product">
+    <h3>Stronger With You</h3>
+    <p>A bold fragrance with spicy sweetness.</p>
+    <p><strong>AED 250</strong></p>
+    <button class="button" onclick="showImage()">View Image</button>
+    <img id="swyImage" 
+         src="https://i.imgur.com/X2bS2Wh.jpg" 
+         alt="Stronger With You Fragrance">
+    <br/>
+    <button id="buyNow" class="button" onclick="buyNow()">Buy Now</button>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 SilkenPerfumes.ae. All rights reserved.</p>
+</footer>
+
+<script>
+  function showImage() {
+    const img = document.getElementById('swyImage');
+    const buyBtn = document.getElementById('buyNow');
+    img.style.display = 'block';
+    buyBtn.style.display = 'inline-block';
+  }
+
+  function buyNow() {
+    window.open("https://www.instagram.com/silkenperfumes.ae/", "_blank");
+  }
+</script>
+
+</body>
+</html>
